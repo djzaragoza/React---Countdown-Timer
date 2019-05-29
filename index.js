@@ -53,6 +53,19 @@ class App extends React.Component {
         this.state = {
             seconds: '00', // responsible for the seconds
             minutes: '' // responsible for the minutes
-        }
+}
+
+    }
+
+    render() {
+        return (
+            <div>
+                <TimerInput minutes={this.state.minutes}/>
+                <Timer minutes={this.state.minutes}
+                seconds={this.state.seconds}/>
+                <StartButton/>
+            </div>
+        );
+
     }
 }
