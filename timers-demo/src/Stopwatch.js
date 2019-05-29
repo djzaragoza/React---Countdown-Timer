@@ -14,7 +14,24 @@ class Stopwatch extends Component {
             timerTime: this.state.timerTime,
             timerStart: Date.now() - this.state.timerTime
         });
-    }
+        this.timer = setInterval(() => {
+            this.setState({
+                timerTime: Date.now() - this.state.timerStart
+            });
+        }, 10);
+    };
+
+    stopTimer = () => {
+        this.setState({ timerOn: false });
+        clearInterval(this.timer);
+    };
+
+    resetTimer = () => {
+        this.setState({
+            timerStart: 0,
+            timerTime: 0
+        });
+    };
 
     render() {
         return (
