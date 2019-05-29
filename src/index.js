@@ -30,7 +30,7 @@ class StartButton extends React.Component {
     render() {
         return (
             <div style={{ marginLeft: 130 }}>
-                <button>Start</button>
+                <button onClick={this.props.startCountDown}>Start</button>
             </div>
         );
     }
