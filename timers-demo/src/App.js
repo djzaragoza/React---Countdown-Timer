@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Stopwatch from "./StopWAtch";
+import Stopwatch from "./Stopwatch";
 import Countdown from "./Countdown";
 
 class App extends Component {
